@@ -4,3 +4,16 @@
   --color-tertiary: #0000ff;
   --max-width-desktop: 1320px;
 }
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none; /* Hides the scrollbar in Firefox */
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none; /* Hides the scrollbar in Internet Explorer and Edge */
+}
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar in Chrome, Safari, and Opera */
+}

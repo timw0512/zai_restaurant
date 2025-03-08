@@ -1,58 +1,47 @@
 import Icon from "@/conponents/common/Icon";
 import { useState } from "react";
+import { SOCIAL_LIST } from "@/constants/social";
 
 function HeaderSearchBar() {
-  const socialList = [
-    {
-      name: "Facebook",
-      url: "https://www.facebook.com/",
-      icon: "facebook",
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/",
-      icon: "twitter",
-    },
-    {
-      name: "Instagram",
-      url: "https://www.instagram.com/",
-      icon: "instagram",
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/",
-      icon: "linkedin",
-    },
-  ];
   const [keyword, setKeyword] = useState("");
 
   return (
     <div className="header-search-bar">
-      <Icon name="hambuger_menu" />
-      <div className="social-site">
-        <div className="social-icon">
-          {socialList.map((social) => (
-            <button
-              key={social.name}
-              type="button"
-              onClick={() => window.open(social.url, "_blank")}
-            >
-              <Icon name={social.icon} />
-            </button>
-          ))}
-        </div>
-        <input
-          type="text"
-          value={keyword}
-          onChange={(e) => setKeyword(e.target.value)}
-          placeholder="Search here . . ."
-        />
+      <div className="header-content">
         <button
           type="button"
-          onClick={() => console.log({ keyword })}
+          className="hamberger-menu"
+          onClick={() => console.log("Hamberger menu clicked")}
         >
-          <Icon name="search" />
+          <Icon name="hambuger_menu" />
         </button>
+        <div className="social-site">
+          <div className="social-icon">
+            {SOCIAL_LIST.map((social) => (
+              <button
+                key={social.name}
+                type="button"
+                onClick={() => window.open(social.url, "_blank")}
+              >
+                <Icon name={social.icon} />
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="search-bar">
+          <input
+            type="text"
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
+            placeholder="Search here . . ."
+          />
+          <button
+            type="button"
+            onClick={() => console.log({ keyword })}
+          >
+            <Icon name="search" />
+          </button>
+        </div>
       </div>
     </div>
   );
