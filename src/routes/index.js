@@ -8,10 +8,12 @@ export default [
         path: "/",
         component: Home,
         exact: true,
+        useLayout: true
     },
     {
         path: "/about",
         component: About,
-        exact: true
+        exact: true,
+        useLayout: true
     }
 ];
