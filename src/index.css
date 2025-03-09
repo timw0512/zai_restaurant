@@ -17,3 +17,6 @@
 .hidden-scrollbar::-webkit-scrollbar {
   display: none; /* Hides the scrollbar in Chrome, Safari, and Opera */
 }
+.mt-30 {
+  margin-top: 30px !important;
+}
