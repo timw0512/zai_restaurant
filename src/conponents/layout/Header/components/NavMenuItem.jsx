@@ -45,6 +45,7 @@ const NavMenuItemStyled = styled.button`
       flex-direction: column;
       gap: 10px;
       padding: 10px;
+      z-index: 99999;
       .sub-nav-item {
         padding: 4px;
         white-space: nowrap;

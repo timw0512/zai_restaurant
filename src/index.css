@@ -20,3 +20,59 @@
 .mt-30 {
   margin-top: 30px !important;
 }
+
+.text-ellipsis,
+.text-ellipsis-3,
+.text-ellipsis-2,
+.text-ellipsis-1 {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: end;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.text-ellipsis-1 {
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.text-ellipsis-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.text-ellipsis-3 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-55 {
+  gap: 55px;
+}
+
+.w-100 {
+  width: 100%;
+}

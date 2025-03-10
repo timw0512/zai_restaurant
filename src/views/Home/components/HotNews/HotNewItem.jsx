@@ -71,12 +71,12 @@ const NewItemStyled = styled.div`
 `;
 
 function HotNewItem({ item }) {
-  const { bgUrl, category, title, author, createTime } = item;
+  const { imageUrl, category, title, author, createTime } = item;
 
   return (
     <NewItemStyled>
       <img
-        src={bgUrl}
+        src={imageUrl}
         alt={`${category}_${title}_by_${author}`}
       />
       <div className="info">

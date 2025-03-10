@@ -47,6 +47,7 @@ function ProgressBar({ current, total }) {
         className="progress"
         style={{
           width: `${percent}%`,
+          transition: "300ms linear",
         }}
       >
         <div className="past"></div>
