@@ -5,11 +5,12 @@ import styled from "styled-components";
 const ButotnViewAllStyled = styled.button`
   display: flex;
   gap: 10px;
-  background-color: #fff;
+  width: fit-content;
+  height: fit-content;
   padding: 11px 18px;
   border: 1px solid #cfcfcf;
   border-radius: 4px;
-  height: fit-content;
+  background-color: #fff;
   span {
     font-family: Inter;
     font-weight: 500;
@@ -19,10 +20,13 @@ const ButotnViewAllStyled = styled.button`
   }
 `;
 
-function ViewAll() {
+function ViewAll({ title = "View All", onClick }) {
   return (
-    <ButotnViewAllStyled type="button">
-      <span>View All</span>
+    <ButotnViewAllStyled
+      type="button"
+      onClick={onClick}
+    >
+      <span>{title}</span>
       <Icon name="view_all" />
     </ButotnViewAllStyled>
   );

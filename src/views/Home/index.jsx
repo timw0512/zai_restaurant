@@ -9,6 +9,7 @@ import SubscribeAndFollow from "./components/SubscribeAndFollower";
 import ReciveEmailDaily from "./components/ReciveEmailDaily";
 import HotCategories from "./components/HotCategories";
 import TrendingNews from "./components/TrendingNews";
+import PopularPost from "./components/PopularPost";
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
           <SubscribeAndFollow />
           <ReciveEmailDaily />
           <HotCategories />
+          <PopularPost />
         </aside>
       </div>
       <SmallAds

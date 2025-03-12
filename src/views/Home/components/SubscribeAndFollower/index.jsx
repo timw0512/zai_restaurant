@@ -39,7 +39,7 @@ function SubscribeAndFollow() {
       <span className="aside-title">Subscribe & Followers</span>
       <ProgressBar
         current={1}
-        total={20}
+        total={15}
       />
       <div className="social-link-list mt-30">
         {SOCIAL_LIST?.map((social, index) => (

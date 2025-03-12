@@ -46,7 +46,7 @@ function HotCategories() {
       <span className="aside-title">Hot Categories</span>
       <ProgressBar
         current={1}
-        total={20}
+        total={15}
       />
       <div className="category-list mt-30">
         {CATEGORY_LIST?.map((category, index) => (
