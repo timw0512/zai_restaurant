@@ -69,6 +69,10 @@
   flex-wrap: wrap;
 }
 
+.gap-50 {
+  gap: 50px;
+}
+
 .gap-55 {
   gap: 55px;
 }

@@ -40,7 +40,7 @@ export const HeaderContainer = styled.div`
           color: #ffffff;
           background: transparent;
           border: none !important;
-          ::placeholder {
+          &::placeholder {
             font-family: Inter;
             font-weight: 400;
             font-size: 14px;

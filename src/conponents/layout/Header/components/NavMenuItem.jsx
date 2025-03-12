@@ -65,6 +65,7 @@ const NavMenuItemStyled = styled.button`
 
 function NavMenuItem({ item }) {
   const location = useLocation();
+
   const hasChildren = item?.children && item?.children.length > 0;
   const isActive = location.pathname === item?.path;
 
