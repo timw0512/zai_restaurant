@@ -20,8 +20,8 @@ const PopularPostStyled = styled.div`
       align-items: center;
       gap: 18px;
       img {
-        width: 160px;
-        height: 160px;
+        width: 110px;
+        height: 110px;
         object-fit: cover;
         border-radius: 5px;
       }
@@ -75,7 +75,7 @@ function PopularPost() {
         total={15}
       />
       <div className="popular-post-list mt-30">
-        {POPULAR_POST?.splice(0, 3)?.map((item, index) => (
+        {POPULAR_POST?.slice(0, 3)?.map((item, index) => (
           <PostItem
             item={item}
             key={`${item.title}_${index}`}

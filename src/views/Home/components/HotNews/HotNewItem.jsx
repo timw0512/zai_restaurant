@@ -35,6 +35,7 @@ const NewItemStyled = styled.div`
       align-items: center;
       background-color: #f4796c;
       width: fit-content;
+      border-radius: 3px;
       span {
         font-weight: 600;
         font-size: 13px;
@@ -70,11 +71,11 @@ const NewItemStyled = styled.div`
   }
 `;
 
-function HotNewItem({ item }) {
+function HotNewItem({ item, className }) {
   const { imageUrl, category, title, author, createTime } = item;
 
   return (
-    <NewItemStyled>
+    <NewItemStyled className={className}>
       <img
         src={imageUrl}
         alt={`${category}_${title}_by_${author}`}
@@ -87,7 +88,7 @@ function HotNewItem({ item }) {
         >
           <span>{category}</span>
         </div>
-        <span className="title">{title}</span>
+        <span className="title text-ellipsis-2">{title}</span>
         <div className="more-info">
           <div className="author">
             <Icon

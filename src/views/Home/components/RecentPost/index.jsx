@@ -93,8 +93,8 @@ function RecentPost({ className }) {
         </div>
         <div className="other-content">
           {RECENT_LIST?.slice(1)
-            .splice(0, 3)
-            .map((item, index) => (
+            ?.splice(0, 3)
+            ?.map((item, index) => (
               <PostItem
                 item={item}
                 key={`${item.title}_${index}`}

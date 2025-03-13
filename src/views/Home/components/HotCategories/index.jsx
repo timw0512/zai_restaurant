@@ -21,7 +21,8 @@ const HotCategoriesStyled = styled.div`
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 25px 27px;
+      height: 80px;
+      padding: 27px 25px;
       border-radius: 6px;
       background-position: center;
       background-repeat: no-repeat;

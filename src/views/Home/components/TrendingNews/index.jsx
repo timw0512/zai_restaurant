@@ -5,6 +5,7 @@ import ProgressBar from "@/conponents/common/ProgressBar";
 import ViewAll from "@/conponents/common/buttons/ViewAll";
 import { TRENDING_NEWS } from "@/constants/fakeTrending";
 import dayjs from "dayjs";
+import BigNewItem from "@/conponents/common/BigNewItem";
 
 const TrendingNewsStyled = styled.div`
   .article-title {
@@ -21,7 +22,6 @@ const TrendingNewsStyled = styled.div`
     img {
       border-radius: 6px;
     }
-    .trending-no1,
     .other-trending {
       display: flex;
       flex: 1;
@@ -65,28 +65,24 @@ const TrendingNewsStyled = styled.div`
         }
       }
     }
-    .trending-no1 {
-      width: 100%;
-      gap: 25px;
-      .trending-description {
-        font-family: Inter;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
-        text-transform: capitalize;
-        color: #545e69;
-      }
-    }
     .other-trending {
       flex-direction: column;
-      gap: 15px;
+      gap: 14.5px;
       position: relative;
+      img {
+        height: 200px;
+      }
       .trending-category {
         position: absolute;
         top: 20px;
         left: 20px;
       }
       .trending-info {
+        gap: 12.5px;
+        div {
+          display: flex;
+          align-items: center;
+        }
         .trending-title {
           font-weight: 700;
           font-size: 20px;
@@ -96,6 +92,9 @@ const TrendingNewsStyled = styled.div`
         }
       }
     }
+  }
+  .other-trending-list {
+    padding-bottom: 50px;
   }
 `;
 function TrendingNews() {
@@ -111,43 +110,7 @@ function TrendingNews() {
         total={15}
       />
       <div className="trending-list mt-30">
-        <div className="trending-no1">
-          <img
-            src={top1Trending?.imageUrl}
-            alt={top1Trending?.title}
-          />
-          <div className="trending-info">
-            <p className="trending-category">{top1Trending?.category}</p>
-            <p className="trending-title">{top1Trending?.title}</p>
-            <div className="trending-writen-info">
-              <div className="author">
-                <Icon
-                  name="account"
-                  color="#6d757f"
-                />
-                <span>BY</span>
-                <span>{top1Trending?.author}</span>
-              </div>
-              <div className="create-time">
-                <Icon
-                  name="calendar"
-                  color="#6d757f"
-                />
-                <span>
-                  {dayjs(top1Trending?.createTime).format("DD MMMM, YYYY")}
-                </span>
-              </div>
-              <div className="time-pass">
-                <Icon
-                  name="clock_revert"
-                  color="#6d757f"
-                />
-              </div>
-            </div>
-            <p className="trending-description">{top1Trending?.description}</p>
-            <ViewAll title="Read More" />
-          </div>
-        </div>
+        <BigNewItem newItem={top1Trending} />
         <div className="other-trending-list">
           {TRENDING_NEWS?.slice(1)
             ?.splice(0, 3)
@@ -166,6 +129,8 @@ function TrendingNews() {
                   <div className="trending-writen-info">
                     <div className="author">
                       <Icon
+                        width="16px"
+                        height="16px"
                         name="account"
                         color="#6d757f"
                       />
@@ -174,6 +139,8 @@ function TrendingNews() {
                     </div>
                     <div className="create-time">
                       <Icon
+                        width="16px"
+                        height="16px"
                         name="calendar"
                         color="#6d757f"
                       />
