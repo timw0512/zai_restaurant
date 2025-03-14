@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/zaira_technology/">
       <Routes>
         {routes.map(({ path, component, useLayout }) => {
           const RouteElement = component;

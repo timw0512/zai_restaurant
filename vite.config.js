@@ -5,7 +5,7 @@ import { resolve } from "node:path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/zaira_technology",
+  base: "/zaira_technology/",
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "./src") }],
   },
