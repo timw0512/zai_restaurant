@@ -27,6 +27,7 @@
 }
 
 .text-ellipsis,
+.text-ellipsis-4,
 .text-ellipsis-3,
 .text-ellipsis-2,
 .text-ellipsis-1 {
@@ -52,6 +53,10 @@
 .text-ellipsis-3 {
   -webkit-line-clamp: 3;
   line-clamp: 3;
+}
+.text-ellipsis-4 {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
 }
 
 .d-flex {

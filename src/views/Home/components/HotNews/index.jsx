@@ -39,9 +39,9 @@ function HotNews() {
           <HotNewItem item={HOT_NEWS?.[0]} />
         </div>
         <div className="other">
-          {HOT_NEWS?.slice(1, 4)?.map((item) => (
+          {HOT_NEWS?.slice(1, 4)?.map((item, index) => (
             <div
-              key={`new_${item?.title}`}
+              key={`hot_new_${item?.title}_${index}`}
               className="news-item"
             >
               <HotNewItem item={item} />

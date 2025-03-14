@@ -32,6 +32,7 @@ const BigNewItemStyled = styled.div`
       font-size: 28px;
       line-height: 36.4px;
       text-transform: capitalize;
+      color: #183354;
     }
     .writen-info {
       display: flex;
@@ -61,16 +62,21 @@ const BigNewItemStyled = styled.div`
   }
 `;
 
-function BigNewItem({ newItem }) {
+function BigNewItem({
+  newItem,
+  titleClassName,
+  descriptionClassName,
+  className,
+}) {
   return (
-    <BigNewItemStyled>
+    <BigNewItemStyled className={className}>
       <img
         src={newItem?.imageUrl}
         alt={newItem?.title}
       />
       <div className="info">
         <p className="category">{newItem?.category}</p>
-        <p className="title">{newItem?.title}</p>
+        <p className={`title ${titleClassName}`}>{newItem?.title}</p>
         <div className="writen-info">
           <div className="author">
             <Icon
@@ -94,7 +100,9 @@ function BigNewItem({ newItem }) {
             />
           </div>
         </div>
-        <p className="description">{newItem?.description}</p>
+        <p className={`description ${descriptionClassName}`}>
+          {newItem?.description}
+        </p>
         <ViewAll title="Read More" />
       </div>
     </BigNewItemStyled>

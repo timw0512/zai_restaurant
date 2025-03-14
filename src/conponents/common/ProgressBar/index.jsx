@@ -42,7 +42,7 @@ const ProgressBarStyled = styled.div`
 function ProgressBar({ current, total }) {
   const percent = (100 * current) / total;
   return (
-    <ProgressBarStyled>
+    <ProgressBarStyled className="progress-bar">
       <div
         className="progress"
         style={{

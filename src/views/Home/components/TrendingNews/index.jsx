@@ -110,7 +110,11 @@ function TrendingNews() {
         total={15}
       />
       <div className="trending-list mt-30">
-        <BigNewItem newItem={top1Trending} />
+        <BigNewItem
+          newItem={top1Trending}
+          titleClassName={"text-ellipsis-2"}
+          descriptionClassName={"text-ellipsis-4"}
+        />
         <div className="other-trending-list">
           {TRENDING_NEWS?.slice(1)
             ?.splice(0, 3)

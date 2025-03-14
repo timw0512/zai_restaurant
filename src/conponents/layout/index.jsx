@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
+import LayoutController from "./LayoutController";
 
 const LayoutContainer = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const LayoutContainer = styled.div`
   main {
     flex: 1;
     overflow-y: scroll;
+    position: relative;
   }
 `;
 
@@ -18,8 +20,14 @@ function Layout({ children }) {
     <Suspense fallback={<> </>}>
       <LayoutContainer>
         <Header />
-        <main className="hidden-scrollbar">{children}</main>
-        <Footer />
+        <main
+          id="main-container"
+          className="hidden-scrollbar"
+        >
+          {children}
+          <Footer />
+          <LayoutController />
+        </main>
       </LayoutContainer>
     </Suspense>
   );

@@ -77,9 +77,9 @@ function BigNews() {
         // ref={carouselRef}
         className="news-content"
       >
-        {BIG_NEWS?.map((item) => (
+        {BIG_NEWS?.map((item, index) => (
           <div
-            key={`new_${item?.title}`}
+            key={`new_${item?.title}_${index}`}
             className="news-item"
           >
             <HotNewItem item={item} />

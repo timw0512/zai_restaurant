@@ -46,6 +46,7 @@ const NavMenuItemStyled = styled.button`
       gap: 10px;
       padding: 10px;
       z-index: 99999;
+      border-radius: 6px;
       .sub-nav-item {
         padding: 4px;
         white-space: nowrap;
