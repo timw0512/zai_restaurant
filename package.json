@@ -1,16 +1,16 @@
 {
-  "name": "zai_restaurant",
+  "name": "zaira_technology",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://timw0512.github.io/zaira_technology/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
+    "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.0",
